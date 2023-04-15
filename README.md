@@ -4,7 +4,7 @@ An addon for [CubesCocktail](https://github.com/CubesCocktail/CubesCocktail) tha
 
 ### Download
 
-You can download the latest build of MobDrink from the [Jenkins page](http://49.12.216.90:8080/job/EnchantDrink/).
+You can download the latest build of MobDrink from the release page. 
 
 You can also compile the plugin by yourself using Maven.
 
