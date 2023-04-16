@@ -8,7 +8,6 @@ import com.github.zamponimarco.enchantdrink.EnchantDrink;
 import com.github.zamponimarco.enchantdrink.skill.Skill;
 import com.google.common.collect.Lists;
 import lombok.Getter;
-import org.apache.commons.lang.RandomStringUtils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
