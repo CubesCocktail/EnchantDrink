@@ -1,7 +1,7 @@
 package com.github.zamponimarco.enchantdrink.enchant;
 
-import com.github.zamponimarco.cubescocktail.database.NamedModel;
 import com.github.zamponimarco.cubescocktail.libs.annotation.Serializable;
+import com.github.zamponimarco.cubescocktail.libs.model.NamedModel;
 import com.github.zamponimarco.cubescocktail.libs.util.ItemUtils;
 import com.github.zamponimarco.cubescocktail.libs.util.MessageUtils;
 import com.github.zamponimarco.enchantdrink.EnchantDrink;

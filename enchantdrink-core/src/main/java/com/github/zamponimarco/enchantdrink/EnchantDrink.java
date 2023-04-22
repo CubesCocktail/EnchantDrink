@@ -60,7 +60,7 @@ public class EnchantDrink extends Addon {
     }
 
     private void setUpData() {
-        this.enchantManager = new EnchantManager(Enchant.class, "comp", CubesCocktail.getInstance());
+        this.enchantManager = new EnchantManager(Enchant.class, "comp_yaml", CubesCocktail.getInstance());
     }
 
     private void setUpCommands() {

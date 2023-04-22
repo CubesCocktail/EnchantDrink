@@ -17,7 +17,9 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.util.*;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 @Getter
@@ -26,8 +28,16 @@ public class EnchantManager extends ModelManager<Enchant> {
     private List<Enchant> enchants;
 
     public EnchantManager(Class<Enchant> classObject, String databaseType, JavaPlugin plugin) {
-        super(classObject, databaseType, plugin, ImmutableMap.of("addon", EnchantDrink.getInstance()));
-        this.enchants = database.loadObjects();
+        super(classObject, databaseType, plugin, ImmutableMap.of("name", "enchant",
+                "fileSupplier", (Supplier<File>) () -> {
+                    String fileName = "enchant.yml";
+                    File dataFile = new File(EnchantDrink.getInstance().getDataFolder(), fileName);
+                    if (!dataFile.exists()) {
+                        EnchantDrink.getInstance().saveResource(fileName);
+                    }
+                    return dataFile;
+                }));
+        this.enchants = fetchModels();
     }
 
     public Enchant getByName(String name) {
